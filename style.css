@@ -1,18 +1,15 @@
-/* Application de l'image de fond */
+/* Fond dégradé pour tout le site */
 body {
-    background-image: url('assets/images/fond.png'); /* Spécifier le chemin de l'image */
-    background-size: cover; /* Couvre toute la page sans répéter */
-    background-position: center center; /* Centrer l'image */
-    background-attachment: fixed; /* Garde l'image fixe lors du défilement */
-    color: white; /* Texte en blanc */
-    font-family: 'Okaso', sans-serif; /* Police Okaso */
+    background: linear-gradient(to bottom, rgba(15, 55, 97, 1), rgba(0, 0, 0, 0.9)); /* Dégradé du bleu au noir */
+    color: white;
+    font-family: 'Okaso', sans-serif;
     margin: 0;
   }
   
-  /* Navbar : fond sombre avec texte blanc */
+  /* Navbar avec fond noir */
   .navbar {
-    background-color: rgba(15, 55, 97, 0.8); /* Fond sombre transparent */
-    box-shadow: none; /* Retirer l'ombre */
+    background-color: #000000 !important; /* Couleur la plus noire possible */
+    box-shadow: none; /* Pas d'ombre */
   }
   
   .navbar .navbar-brand,
@@ -21,13 +18,32 @@ body {
   }
   
   .navbar .nav-link:hover {
-    color: #ffb400; /* Survol doré */
+    color: #ffb400; /* Couleur dorée au survol */
   }
   
-  /* Section CV avec fond sombre et texte blanc */
+  /* Section Présentation */
+  #presentation {
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  #presentation h1, #presentation p {
+    color: white;
+  }
+  
+  #presentation img {
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+  
+  /* Section CV avec fond dégradé et texte blanc */
   #cv {
-    background-color: rgba(15, 55, 97, 0.8); /* Fond sombre transparent */
+    background: linear-gradient(to bottom, rgba(15, 55, 97, 0.8), rgba(0, 0, 0, 0.9)); /* Dégradé */
     padding: 60px 20px;
+  }
+  
+  #cv h2, #cv p {
+    color: white;
   }
   
   #cv .btn {
@@ -41,24 +57,46 @@ body {
     background-color: #ff9000;
   }
   
-  /* Section Projets : texte blanc, fond par défaut */
+  /* Section Projets sans fond, avec des bordures blanches */
   #projets {
     padding: 60px 20px;
+    background-color: transparent; /* Pas de fond */
   }
   
   #projets h2 {
     color: white;
   }
   
+  .card {
+    border: 2px solid white; /* Bordure blanche autour des projets */
+    background-color: transparent; /* Pas de fond */
+  }
+  
   .card-body {
-    background-color: rgba(0, 0, 0, 0.7); /* Fond sombre dans les cartes avec transparence */
+    color: white;
+    background-color: transparent; /* Pas de fond */
+  }
+  
+  .card-body a {
     color: white;
   }
   
-  /* Footer avec fond sombre */
+  .card-body a:hover {
+    color: #ffb400; /* Lien doré au survol */
+  }
+  
+  /* Footer avec fond spécifique #1a1880 */
   footer {
-    background-color: rgba(15, 55, 97, 0.8); /* Fond sombre transparent */
+    background-color: #1a1880; /* Fond du footer en #1a1880 */
     color: white;
     padding: 20px 0;
+  }
+  
+  footer a {
+    color: white;
+  }
+  
+  footer a:hover {
+    color: #ffb400; /* Lien doré au survol */
   }
   
