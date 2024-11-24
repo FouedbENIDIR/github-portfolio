@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Style personnalisé -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">My Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#presentation">Présentation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#cv">My Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projets">My Projects</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Section Présentation -->
+  <section id="presentation" class="container text-center py-5">
+    <h1 class="display-4">Hi ! My name is Foued BENIDIR</h1>
+    <p class="lead">Développeur web passionné par [votre domaine d'expertise], j'ai de l'expérience dans [technologies utilisées].</p>
+    <img src="assets/images/photo_de_profile.jpg" alt="Photo de profil" class="rounded-circle" width="200">
+  </section>
+
+  <!-- Section CV -->
+  <section id="cv" class="bg-light py-5">
+    <div class="container text-center">
+      <h2>Mon CV</h2>
+      <p>Téléchargez mon CV ci-dessous :</p>
+      <a href="assets/cv/mon_cv.pdf" class="btn btn-primary" download>See my Resume</a>
+    </div>
+  </section>
+
+  <!-- Section Projets -->
+  <section id="projets" class="container py-5">
+    <h2 class="text-center">My Projects</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="assets/images/projet1.png" class="card-img-top" alt="Projet 1">
+          <div class="card-body">
+            <h5 class="card-title">Projet 1</h5>
+            <p class="card-text">Description du projet 1. Utilisation de [technologies] pour créer une application [objectif].</p>
+            <a href="https://github.com/foueDBENIDIR/projet1" class="btn btn-primary">Voir le projet</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="assets/images/projet2.png" class="card-img-top" alt="Projet 2">
+          <div class="card-body">
+            <h5 class="card-title">Projet 2</h5>
+            <p class="card-text">Description du projet 2. Développement d'une solution [technologie utilisée].</p>
+            <a href="https://github.com/votre_nom_utilisateur/projet2" class="btn btn-primary">Voir le projet</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="assets/images/projet3.png" class="card-img-top" alt="Projet 3">
+          <div class="card-body">
+            <h5 class="card-title">Projet 3</h5>
+            <p class="card-text">Description du projet 3. Application développée avec [technologies] pour [objectif].</p>
+            <a href="https://github.com/votre_nom_utilisateur/projet3" class="btn btn-primary">Voir le projet</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>Contactez-moi à <a href="foued.benidir@groupe-esigelec.org" class="text-white">votre_email@example.com</a></p>
+  </footer>
+
+  <!-- Bootstrap JS & Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
