@@ -10,91 +10,109 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">My Portfolio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#presentation">Présentation</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#cv">My Resume</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projets">My Projects</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
   <!-- Section Présentation -->
-  <section id="presentation" class="container text-center py-5">
-    <h1 class="display-4">Hi ! My name is Foued BENIDIR</h1>
-    <p class="lead">Currently enrolled in master of engineering in Rouen, France, I am seeking an internship (master thesis) 
-        to grow my skills in AI, ML and project management. 
-    </p>
-    <img src="assets/images/photo_de_profile.jpg" alt="Photo de profil" class="rounded-circle" width="200">
+  <section id="presentation" class="container text-center py-5 section-hover">
+    <h2 class="animated-text">Foued BENIDIR</h2>
+    <p class="lead animated-text">Currently enrolled in master of engineering in Rouen, France...</p>
   </section>
 
   <!-- Section CV -->
-  <section id="cv" class="py-5">
-    <div class="container text-center">
-      <h2>Mon CV</h2>
-      <p>Téléchargez mon CV ci-dessous :</p>
-      <a href="assets/cv/mon_cv.pdf" class="btn btn-warning" download>See my Resume</a>
+  <section id="cv" class="container py-5 section-hover">
+    <h2 class="animated-text">Resume</h2>
+    <div class="section-content">
+      <p class="animated-text">Download it here :</p>
+      <a href="assets/cv/mon_cv.pdf" class="btn btn-warning animated-text" download>See my Resume</a>
     </div>
   </section>
 
   <!-- Section Projets -->
-  <section id="projets" class="container py-5">
-    <h2 class="text-center">My Projects</h2>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card">
-          <img src="assets/images/projet1.png" class="card-img-top" alt="Projet 1">
-          <div class="card-body">
-            <h5 class="card-title">Projet 1</h5>
-            <p class="card-text">Description du projet 1. Utilisation de [technologies] pour créer une application [objectif].</p>
-            <a href="https://github.com/foueDBENIDIR/projet1" class="btn btn-warning">Voir le projet</a>
-          </div>
+<section id="projets" class="container py-5 section-hover">
+  <h2 class="animated-text">Projects</h2>
+  <div class="section-content">
+    <p class="animated-text">During my studies and my professional work experiences, I had the opportunity to work on several projects :</p>
+    <div class="projects-container">
+      <!-- Projet 1 -->
+      <div class="project-item" id="project1">
+        <div class="project-image">
+          <img src="assets/images/fond.png" alt="Project 1 Image">
+        </div>
+        <h3>IMU</h3>
+        <div class="project-description">
+          <p>This is a description for Project 1. This project involved...</p>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="assets/images/projet2.png" class="card-img-top" alt="Projet 2">
-          <div class="card-body">
-            <h5 class="card-title">Projet 2</h5>
-            <p class="card-text">Description du projet 2. Développement d'une solution [technologie utilisée].</p>
-            <a href="https://github.com/votre_nom_utilisateur/projet2" class="btn btn-warning">Voir le projet</a>
-          </div>
+
+      <!-- Projet 2 -->
+      <div class="project-item" id="project2">
+        <h3>Segmentation of surgical movements using JIGSAWS datasets</h3>
+        <div class="project-description">
+          <p>This is a description for Project 2. It focused on...</p>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="assets/images/projet3.png" class="card-img-top" alt="Projet 3">
-          <div class="card-body">
-            <h5 class="card-title">Projet 3</h5>
-            <p class="card-text">Description du projet 3. Application développée avec [technologies] pour [objectif].</p>
-            <a href="https://github.com/votre_nom_utilisateur/projet3" class="btn btn-warning">Voir le projet</a>
-          </div>
+
+      <!-- Projet 3 -->
+      <div class="project-item" id="project3">
+        <h3>Collecting Data and Analysis</h3>
+        <div class="project-description">
+          <p>This is a description for Project 3. The main goal was...</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Section Contact -->
+  <section id="contact" class="container py-5 section-hover">
+    <h2 class="animated-text">Contact</h2>
+    <div class="section-content">
+      <ul class="list-unstyled animated-text">
+        <li><strong>Email:</strong> <a href="mailto:foued.benidir@example.com">foued.benidir@groupe-esigelec.org</a></li>
+        <li><strong>Phone:</strong> +33 6 79 29 54 13</li>
+        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/foued-benidir" target="_blank">linkedin.com/in/foued-benidir</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/foued-benidir" target="_blank">github.com/foued-benidir</a></li>
+      </ul>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-white text-center py-3">
-    <p>Contactez-moi à <a href="mailto:foued.benidir@groupe-esigelec.org" class="text-white">foued.benidir@groupe-esigelec.org</a></p>
+  <footer class="py-3">
+    <p class="text-center">
+      Made by Foued BENIDIR - 2024
+    </p>
   </footer>
 
-  <!-- Bootstrap JS & Popper.js -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script>
+    // Pour les clics sur mobile
+    document.querySelectorAll('.section-hover').forEach(section => {
+      section.addEventListener('click', function() {
+        this.classList.toggle('open');
+      });
+    });
+
+    // Fonction pour vérifier si un élément est visible à l'écran
+    function isElementInView(el) {
+      const rect = el.getBoundingClientRect();
+      return rect.top <= window.innerHeight && rect.bottom >= 0;
+    }
+
+    // Ajouter la classe "visible" aux éléments qui sont dans la vue
+    function handleScroll() {
+      const sections = document.querySelectorAll('section');
+      sections.forEach((section) => {
+        if (isElementInView(section)) {
+          section.classList.add('visible'); // Ajoute la classe pour animer le texte
+        } else {
+          section.classList.remove('visible'); // Enlève la classe si l'élément est hors de la vue
+        }
+      });
+    }
+
+    // Exécuter la fonction handleScroll lors du défilement
+    window.addEventListener('scroll', handleScroll);
+
+    // Exécuter une première fois pour détecter les éléments visibles au chargement de la page
+    document.addEventListener('DOMContentLoaded', handleScroll);
+  </script>
 </body>
 </html>

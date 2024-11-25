@@ -1,102 +1,161 @@
-/* Fond dégradé pour tout le site */
+/* Fond avec image et dégradé pour tout le site */
 body {
-    background: linear-gradient(to bottom, rgba(15, 55, 97, 1), rgba(0, 0, 0, 0.9)); /* Dégradé du bleu au noir */
-    color: white;
-    font-family: 'Okaso', sans-serif;
-    margin: 0;
+  background: url('assets/images/fond.png') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+}
+
+/* Navbar transparente */
+.navbar {
+  background: transparent !important;
+  box-shadow: none;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: white !important;
+}
+
+.navbar .nav-link:hover {
+  color: transparent;
+}
+
+/* Style général pour les sections */
+section {
+  padding: 60px 20px;
+  background: transparent;
+  margin: 20px auto;
+  border-radius: 0;
+  box-shadow: none;
+  color: white;
+  position: relative;
+}
+
+/* Pour cacher le contenu de la section par défaut */
+.section-content {
+  display: none;
+  font-size: 1rem;
+  max-height: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease-out, max-height 0.4s ease-out;
+}
+
+/* Quand la section est survolée, on affiche le contenu */
+.section-hover:hover .section-content,
+.section-hover.open .section-content {
+  display: block;
+  opacity: 1;
+  max-height: 1000px;
+  transition: opacity 0.5s ease-in, max-height 1s ease-in;
+}
+
+/* Animation de la ligne sous chaque section */
+section::before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 1px;
+  background-color: white;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.6s ease;
+}
+
+/* Quand la section est survolée, on augmente la largeur de la ligne */
+.section-hover:hover::before {
+  width: 90%;
+}
+
+/* Animation du texte */
+@keyframes slideIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
   }
-  
-  /* Navbar avec fond noir */
-  .navbar {
-    background-color: #000000 !important; /* Couleur la plus noire possible */
-    box-shadow: none; /* Pas d'ombre */
+  100% {
+      opacity: 1;
+      transform: translateY(0);
   }
-  
-  .navbar .navbar-brand,
-  .navbar .nav-link {
-    color: white !important; /* Texte blanc */
-  }
-  
-  .navbar .nav-link:hover {
-    color: #ffb400; /* Couleur dorée au survol */
-  }
-  
-  /* Section Présentation */
-  #presentation {
-    padding: 80px 20px;
-    text-align: center;
-  }
-  
-  #presentation h1, #presentation p {
-    color: white;
-  }
-  
-  #presentation img {
-    border-radius: 50%;
-    margin-top: 20px;
-  }
-  
-  /* Section CV avec fond dégradé et texte blanc */
-  #cv {
-    background: linear-gradient(to bottom, rgba(15, 55, 97, 0.8), rgba(0, 0, 0, 0.9)); /* Dégradé */
-    padding: 60px 20px;
-  }
-  
-  #cv h2, #cv p {
-    color: white;
-  }
-  
-  #cv .btn {
-    background-color: #ffb400;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-  }
-  
-  #cv .btn:hover {
-    background-color: #ff9000;
-  }
-  
-  /* Section Projets sans fond, avec des bordures blanches */
-  #projets {
-    padding: 60px 20px;
-    background-color: transparent; /* Pas de fond */
-  }
-  
-  #projets h2 {
-    color: white;
-  }
-  
-  .card {
-    border: 2px solid white; /* Bordure blanche autour des projets */
-    background-color: transparent; /* Pas de fond */
-  }
-  
-  .card-body {
-    color: white;
-    background-color: transparent; /* Pas de fond */
-  }
-  
-  .card-body a {
-    color: white;
-  }
-  
-  .card-body a:hover {
-    color: #ffb400; /* Lien doré au survol */
-  }
-  
-  /* Footer avec fond spécifique #1a1880 */
-  footer {
-    background-color: #1a1880; /* Fond du footer en #1a1880 */
-    color: white;
-    padding: 20px 0;
-  }
-  
-  footer a {
-    color: white;
-  }
-  
-  footer a:hover {
-    color: #ffb400; /* Lien doré au survol */
-  }
-  
+}
+
+section.visible .animated-text {
+  animation: slideIn 1s ease-out forwards;
+}
+
+/* Par défaut, les éléments sont invisibles */
+.animated-text {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+section h2, .section-hover {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}
+
+footer {
+  background: transparent;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: transparent;
+}
+
+/* Style pour la section des projets */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Style pour chaque projet individuel */
+.project-item {
+  width: 30%;
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Masquer initialement le contenu du projet */
+.project-item .project-description {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Afficher le contenu du projet au survol */
+.project-item:hover .project-description {
+  opacity: 1;
+  max-height: 1000px;
+}
+
+.project-item .project-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0; /* Initially hidden */
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+
+.project-item:hover .project-image {
+  height: 200px; /* Adjust the height as needed */
+}
