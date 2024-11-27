@@ -21,7 +21,7 @@
     <h2 class="animated-text">Resume</h2>
     <div class="section-content">
       <p class="animated-text">Download it here :</p>
-      <a href="assets/cv/mon_cv.pdf" class="btn btn-warning animated-text" download>See my Resume</a>
+      <a href="assets/cv/mon_cv.pdf" class="btn" download>See my Resume</a>
     </div>
   </section>
 
@@ -33,12 +33,9 @@
     <div class="projects-container">
       <!-- Projet 1 -->
       <div class="project-item" id="project1">
-        <div class="project-image">
-          <img src="assets/images/fond.png" alt="Project 1 Image">
-        </div>
         <h3>IMU</h3>
         <div class="project-description">
-          <p>This is a description for Project 1. This project involved...</p>
+          <button class="btn" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(1)">See details</button>
         </div>
       </div>
 
@@ -46,15 +43,15 @@
       <div class="project-item" id="project2">
         <h3>Segmentation of surgical movements using JIGSAWS datasets</h3>
         <div class="project-description">
-          <p>This is a description for Project 2. It focused on...</p>
+          <button class="btn" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(2)">See details</button>
         </div>
       </div>
 
       <!-- Projet 3 -->
       <div class="project-item" id="project3">
-        <h3>Collecting Data and Analysis</h3>
+        <h3>Data collection and Analysis</h3>
         <div class="project-description">
-          <p>This is a description for Project 3. The main goal was...</p>
+          <button class="btn" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(3)">See details</button>
         </div>
       </div>
     </div>
@@ -62,12 +59,42 @@
 </section>
 
 
+
+
+
+<!-- Modale pour afficher les détails du projet -->
+<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="projectModalLabel">Project Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Contenu dynamique du projet -->
+        <div id="projectDetailsContent">
+          <h3 id="modalProjectTitle">Project Title</h3>
+          <img id="modalProjectImage" src="" alt="Project Image" class="img-fluid mb-3">
+          <p id="modalProjectDescription">Project description...</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
   <!-- Section Contact -->
   <section id="contact" class="container py-5 section-hover">
     <h2 class="animated-text">Contact</h2>
     <div class="section-content">
       <ul class="list-unstyled animated-text">
-        <li><strong>Email:</strong> <a href="mailto:foued.benidir@example.com">foued.benidir@groupe-esigelec.org</a></li>
+        <li><strong>Email:</strong> <a href="mailto:foued.benidir@groupe-esigelec.org">foued.benidir@groupe-esigelec.org</a></li>
         <li><strong>Phone:</strong> +33 6 79 29 54 13</li>
         <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/foued-benidir" target="_blank">linkedin.com/in/foued-benidir</a></li>
         <li><strong>GitHub:</strong> <a href="https://github.com/foued-benidir" target="_blank">github.com/foued-benidir</a></li>
@@ -81,6 +108,54 @@
       Made by Foued BENIDIR - 2024
     </p>
   </footer>
+
+
+
+
+
+
+<!-- Scripts JS (Bootstrap JS, Popper.js, etc.) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+<!-- Script personnalisé pour afficher les détails dans la modale -->
+<script>
+  function showProjectDetails(projectId) {
+    var projectTitle = "";
+    var projectDescription = "";
+    var projectImage = "";
+
+    // Définir les détails en fonction du projet sélectionné
+    switch (projectId) {
+      case 1:
+        projectTitle = "IMU";
+        projectDescription = "Here is the detailed description of the IMU project...";
+        projectImage = "assets\images\fond.png";
+        break;
+      case 2:
+        projectTitle = "Segmentation of surgical movements using JIGSAWS datasets";
+        projectDescription = "Description of the surgical movements segmentation project...";
+        projectImage = "assets/images/project2.jpg";
+        break;
+      case 3:
+        projectTitle = "Collecting Data and Analysis";
+        projectDescription = "Details about the data collection and analysis project...";
+        projectImage = "assets/images/project3.jpg";
+        break;
+    }
+
+    // Mettre à jour le contenu de la modale
+    document.getElementById("modalProjectTitle").textContent = projectTitle;
+    document.getElementById("modalProjectDescription").textContent = projectDescription;
+    document.getElementById("modalProjectImage").src = projectImage;
+  }
+</script>
+
+
+
+
+
+
 
   <script>
     // Pour les clics sur mobile
