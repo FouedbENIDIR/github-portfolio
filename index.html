@@ -12,8 +12,16 @@
 <body>
   <!-- Section Présentation -->
   <section id="presentation" class="container text-center py-5 section-hover">
-    <h2 class="animated-text">Foued BENIDIR</h2>
-    <p class="lead animated-text">Currently enrolled in master of engineering in Rouen, France...</p>
+      <h2 class="animated-text">Intro</h2>
+      <div class="section-content">
+      <p class="lead animated-text">
+      Hi ! My name is Foued BENIDIR, I am 22yo and I am currently enrolledin my final year of a Master’s degree in Engineering at ESIGELEC, specializing in Medical Devices (ISYMED program). I am particularly passionate about medical technologies that leverage physics and mathematics, such as signal processing, image processing, algorithms applied to new way of detecting diseases.
+      I am also interested in the application of AI, machine learning, and computer vision in healthcare. In addition, I enjoy project management and working on the development of medical devices. I thrive in collaborative environments and enjoy working with multiple teams. I am also eager to evolve in an international setting, where diverse perspectives foster innovation and growth.
+      I am hardworking, open-minded, and entrepreneurial, always eager to learn, collaborate, and meet new people. I am excited to begin working on real-world projects and applying the project management principles I’ve learned to practical situations.
+      I am looking for a six-month internship starting in early 2025, where I can apply new technologies to solve real-world challenges. I aim to gain experience in the medical device industry, where technology and healthcare intersect, and take on project management responsibilities to drive innovation while working with multidisciplinary teams.
+      </p>
+    </div>
+    
   </section>
 
   <!-- Section CV -->
@@ -33,7 +41,7 @@
     <div class="projects-container">
       <!-- Projet 1 -->
       <div class="project-item" id="project1">
-        <h3>IMU</h3>
+        <h3>Implantable Inertial Sensor</h3>
         <div class="project-description">
           <button class="btn" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(1)">See details</button>
         </div>
@@ -128,18 +136,18 @@
     // Définir les détails en fonction du projet sélectionné
     switch (projectId) {
       case 1:
-        projectTitle = "IMU";
-        projectDescription = "Here is the detailed description of the IMU project...";
-        projectImage = "assets\images\fond.png";
+        projectTitle = "Implantable Inertial Sensor";
+        projectDescription = "Chief Project –Collaboration with a start-up and an ENT surgeon | This graduation project aims to create a proof-of-concept for an implantable muscle stimulator for patients who have lost the ability to speak following surgeries such as larynx cancer removal. As chief project, I led the development of an Implantable Movement Tracking System intended to restore motor functions. We are currently designing a concept using an Inertial Measurement Unit (IMU) and developed a functional prototype. In collaboration with stakeholders, I co-authored the functional specifications using Agile methodology, managing task planning and delegation within the team. I also conducted patent research and carried out a state-of-the-art review of existing implantable IMU solutions already on the market. Additionally, I created the technical architecture of the system, ensuring compliance with ISO 13485, ISO 14971, and CE standards. Throughout the project, I applied relevant standards, including IEC 62304, IEC 60601, and IEC 62366, to ensure software quality, safety, and usability. As part of this project, I also participated in the Med'Ing Hack 2024 health hackathon, where my team and I were awarded first prize for our innovative solution.";
+        projectImage = "C:\Users\fouf-\OneDrive\Bureau\3A\portfolio\github-portfolio\assets\images\fond.png";
         break;
       case 2:
         projectTitle = "Segmentation of surgical movements using JIGSAWS datasets";
-        projectDescription = "Description of the surgical movements segmentation project...";
+        projectDescription = "Segmentation of surgical gestures is essential for improving the quality of the gestures, enhancing safety, and analyzing the performance of surgeons. By identifying critical points and suggesting areas for improvement, segmentation allows for a detailed evaluation of the surgical process. This idea is based on a study published by Despinoy et al. (2015), titled 'Unsupervised Trajectory Segmentation for Surgical Gesture Recognition in Robotic Training', which introduced a series of tasks to segment gestures and perform gesture recognition. During this project, I conducted a state-of-the-art review of AI applications in medicine and attempted to reproduce the experiment using more optimized deep learning algorithms. The project is still ongoing, and the results are expected to be available in January. This work was developed as part of a school module called Surgical Robotics, at the end of which a research paper is expected and will be presented to a jury.";
         projectImage = "assets/images/project2.jpg";
         break;
       case 3:
-        projectTitle = "Collecting Data and Analysis";
-        projectDescription = "Details about the data collection and analysis project...";
+        projectTitle = "Research Internship – TransRad Team, MR-IQ Project, Luxembourg Institute of Health (LIH) July – August 2024 | Supervisor: Dr. Keunen | Co-author of a research paper, publication expected in 2025";
+        projectDescription = "During my research internship at the Luxembourg Institute of Health, I contributed to the MR-IQ Project under the supervision of Dr. Keunen. My main responsibility involved collecting, transforming, and formatting medical images (MRI, PET, X-ray) into datasets (DICOM, MRD) using Python. These images came from various universities, including Bergen, Valencia, and Stanford. I applied image degradation techniques, such as blur, contrast adjustments, motion artifacts, and noise, using image processing algorithms in Jupyter Notebook. I also developed a Google Form and PowerPoint presentation to facilitate expert evaluation of 600 degraded MRI cases, utilizing Non-Referenced Image Quality Assessment (NR-iQA) methods. In addition, I conducted statistical analysis and authored reports in LaTeX via Overleaf. My work contributed to ongoing research, and I will be a co-author in the upcoming publication expected in 2025.";
         projectImage = "assets/images/project3.jpg";
         break;
     }
