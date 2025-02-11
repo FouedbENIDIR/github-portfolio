@@ -4,245 +4,360 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Style personnalisé -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Section Présentation -->
-  <section id="presentation" class="container text-center py-5 section-hover">
-    <h2 class="animated-text">Intro</h2>
-    <div class="section-content">
-      <p class="lead animated-text">
-        Hi! My name is Foued BENIDIR, and I am currently enrolled in my final year of an engineering cycle at ESIGELEC (Rouen, FRANCE), majoring "Medical Devices Engineering" (ISYMED program).
-      </p>
-      <p class="lead animated-text">
-        During my studies, I had the opportunity to learn and practice subjects like mathematics, physics, IT, Electronics, computer sciences and engineering sciences. 
-        I also had the opportunity to apply my academic knowledge on several modules related to medical devices, such as:
-        research projects,
-        final year project, but also 
-        medical compliance, including European norms (ISO 13485, 14971) and regulatory affairs.
-      </p>
-      <!--<p class="lead animated-text">
-        During this school period, I also worked on various projects, improving skills like meeting deadlines, managing budgets, and collaborating in teams.
-      </p> -->
-      <p class="lead animated-text">
-        My goal after graduation is to continue working to improve my skills, gain technical competences that really matter and that are useful for people.
-        This is why I am currently seeking a 4-6 months internship starting spring 2025 (or earlier if necessary) as engineer to work on projects that really matter. 
-      </p>
+  <main>
+    <section id="presentation" class="container py-5 section-hover">
+      <h2 class="animated-text">Introduction</h2>
+      <div class="section-content">
+        <div class="intro-container">
+          <div class="intro-content">
+            <div class="intro-header animated-text">
+              <span class="greeting">Hi, I'm</span>
+              <span class="name">Foued BENIDIR</span>
+            </div>
+
+            <div class="intro-body">
+              <div class="intro-section animated-text">
+                <p class="highlight-text">
+                  Engineering Student at ESIGELEC (Rouen, FRANCE), specializing in Medical Devices Engineering (ISYMED program)
+                </p>
+              </div>
+
+              <div class="intro-section animated-text">
+                <h3>Background</h3>
+                <p class="description-text">
+                  During my studies, I've developed a strong foundation in mathematics, computer sciences and engineering sciences. 
+                  I've had the opportunity to apply this knowledge in various medical device-related modules, focusing on research projects and medical compliance, 
+                  including European norms (ISO 13485, 14971) and regulatory affairs. Now I want to improve my skills in AI in order 
+                </p>
+              </div>
+
+              <div class="intro-section animated-text">
+                <h3>Key Skills</h3>
+                <div class="skill-tags">
+                  <span class="skill-tag">Mathematics</span>
+                  <span class="skill-tag">Physics</span>
+                  <span class="skill-tag">IT</span>
+                  <span class="skill-tag">AI</span>
+                  <span class="skill-tag">Electronics</span>
+                  <span class="skill-tag">Computer Sciences</span>
+                  <span class="skill-tag">Engineering Sciences</span>
+                  <span class="skill-tag">Medical Compliance</span>
+                  <span class="skill-tag">Regulatory Affairs</span>
+                </div>
+              </div>
+
+              <div class="career-objective animated-text">
+                <h3>Career Objective</h3>
+                <p>
+                  Currently seeking a 4-6 months internship starting spring 2025 (or earlier if necessary) as an engineer. My goal is to contribute to meaningful projects including AI.  
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cv" class="container py-5 section-hover">
+      <h2 class="animated-text">Resume</h2>
+      <div class="section-content">
+        <p class="animated-text">Download it here :</p>
+        <div style="text-align: center;">
+          <a href="assets/relatives_doc/CV_FB.pdf" class="btn" download>See my Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="projets" class="container py-5 section-hover">
+      <h2 class="animated-text">Projects</h2>
+      <div class="section-content">
+        <div class="project-categories">
+          <div class="category-item" data-category="professional">
+            <h3>Professional Projects</h3>
+          </div>
+          <div class="category-item" data-category="academic">
+            <h3>Academic Projects</h3>
+          </div>
+          <div class="category-item" data-category="personal">
+            <h3>Personal Projects</h3>
+          </div>
+        </div>
+
+        <div class="projects-container professional-projects">
+          <article class="project-item" id="project3">
+            <h3>Data collection and Analysis</h3>
+            <div class="project-description">
+              <button class="btn" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(3)">See details</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects-container academic-projects">
+          <article class="project-item" id="project1">
+            <h3>Implantable Inertial Sensor</h3>
+            <div class="project-description">
+              <button class="btn" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(1)">See details</button>
+            </div>
+          </article>
+
+          <article class="project-item" id="project2">
+            <h3>Research project multimodal Computer Vision and Speech Recognition approch</h3>
+            <div class="project-description">
+              <button class="btn" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(2)">See details</button>
+            </div>
+          </article>
+
+          <article class="project-item" id="project4">
+            <h3>Bionic Hand</h3>
+            <div class="project-description">
+              <button class="btn" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(4)">See details</button>
+            </div>
+          </article>
+
+          <article class="project-item" id="project5">
+            <h3>EEG signal processing</h3>
+            <div class="project-description">
+              <button class="btn" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(5)">See details</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects-container personal-projects">
+          <article class="project-item empty-project">
+            <h3>Chat bot using an API and Llama</h3>
+            <div class="project-description">
+              <button class="btn" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(6)">See details</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModalLabel">Project Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div id="projectDetailsContent">
+              <h3 id="modalProjectTitle">Project Title</h3>
+              <img id="modalProjectImage" src="" alt="Project Image" class="img-fluid mb-3">
+              <p id="modalProjectDescription">Project description...</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>  
 
-  <!-- Section CV -->
-  <section id="cv" class="container py-5 section-hover">
-    <h2 class="animated-text">Resume</h2>
-    <div class="section-content">
-      <p class="animated-text">Download it here :</p>
-      <a href="assets/relatives_doc/longCv.FouedBENIDIR.pdf" class="btn" download>See my Resume</a>
-    </div>
-  </section>
+    <section id="contact" class="container py-5 section-hover">
+      <h2 class="animated-text">Contact</h2>
+      <div class="section-content">
+        <div class="contact-container">
 
-  <!-- Section Projets -->
-<section id="projets" class="container py-5 section-hover">
-  <h2 class="animated-text">Projects</h2>
-  <div class="section-content">
-    <p class="animated-text">During my studies and my professional work experiences, I had the opportunity to work on several projects :</p>
-    <div class="projects-container">
-      <!-- Projet 1 -->
-      <div class="project-item" id="project1">
-        <h3>Implantable Inertial Sensor</h3>
-        <div class="project-description">
-          <button class="btn" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(1)">See details</button>
+          <div class="contact-info">
+            <h3 class="animated-text">Contact Information</h3>
+            <div class="info-group animated-text">
+              <i class="fas fa-envelope"></i>
+              <div class="info-content">
+                <h4>Email</h4>
+                <a href="mailto:foued.benidir@groupe-esigelec.org">fouedbenidir24@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="info-group animated-text">
+              <i class="fas fa-phone"></i>
+              <div class="info-content">
+                <h4>Phone</h4>
+                <p>+33 6 79 29 54 13</p>
+              </div>
+            </div>
+
+            <div class="info-group animated-text">
+              <i class="fab fa-linkedin"></i>
+              <div class="info-content">
+                <h4>LinkedIn</h4>
+                <a href="https://www.linkedin.com/in/foued-benidir-250b73178/" target="_blank">Foued BENIDIR</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
+  </main>
 
-      <!-- Projet 2 -->
-      <div class="project-item" id="project2">
-        <h3>Segmentation of surgical movements using JIGSAWS datasets</h3>
-        <div class="project-description">
-          <button class="btn" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(2)">See details</button>
-        </div>
-      </div>
-
-      <!-- Projet 3 -->
-      <div class="project-item" id="project3">
-        <h3>Data collection and Analysis</h3>
-        <div class="project-description">
-          <button class="btn" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(3)">See details</button>
-        </div>
-      </div>
-      <!-- Projet 4 -->
-      <div class="project-item" id="project4">
-        <h3>Bionic Hand</h3>
-        <div class="project-description">
-          <button class="btn" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(4)">See details</button>
-        </div>
-      </div>
-      <!-- Projet 5-->
-      <div class="project-item" id="project5">
-        <h3>EEG signal processing</h3>
-        <div class="project-description">
-          <button class="btn" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(5)">See details</button>
-        </div>
-      </div>
-      <!-- Projet 6
-      <div class="project-item" id="project5">
-        <h3>Neural network to detect bone fracture</h3>
-        <div class="project-description">
-          <button class="btn" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(6)">See details</button>
-        </div>
-      </div>-->
-    </div>
-  </div>
-</section>
-
-
-
-
-
-<!-- Modale pour afficher les détails du projet -->
-<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="projectModalLabel">Project Details</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <!-- Contenu dynamique du projet -->
-        <div id="projectDetailsContent">
-          <h3 id="modalProjectTitle">Project Title</h3>
-          <img id="modalProjectImage" src="" alt="Project Image" class="img-fluid mb-3">
-          <p id="modalProjectDescription">Project description...</p>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-  <!-- Section Contact -->
-  <section id="contact" class="container py-5 section-hover">
-    <h2 class="animated-text">Contact</h2>
-    <div class="section-content">
-      <ul class="list-unstyled animated-text">
-        <li><strong>Email:</strong> <a href="mailto:foued.benidir@groupe-esigelec.org">foued.benidir@groupe-esigelec.org</a></li>
-        <li><strong>Phone:</strong> +33 6 79 29 54 13</li>
-        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/foued-benidir-250b73178/" target="_blank">https://www.linkedin.com/in/foued-benidir-250b73178/</a></li>
-        <!--<li><strong>GitHub:</strong> <a href="https://github.com/foued-benidir" target="_blank">github.com/foued-benidir</a></li> -->
-      </ul>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer class="py-3">
     <p class="text-center">
       Foued BENIDIR - 2024
     </p>
   </footer>
 
-
-
-
-
-
-<!-- Scripts JS (Bootstrap JS, Popper.js, etc.) -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-
-<!-- Script personnalisé pour afficher les détails dans la modale -->
-<script>
-  function showProjectDetails(projectId) {
-    var projectTitle = "";
-    var projectDescription = "";
-    var projectImage = "";
-
-
-    // Définir les détails en fonction du projet sélectionné
-    switch (projectId) {
-      case 1:
-        projectTitle = "Implantable Inertial Sensor - Chief Project – Collaboration with a start-up and an ENT surgeon |";
-        projectDescription = "This graduation project aims to create a proof-of-concept for an implantable muscle stimulator for patients who have lost the ability to speak following surgeries such as larynx cancer removal. As chief project, I led the development of an Implantable Movement Tracking System intended to restore motor functions. We are currently designing a concept using an Inertial Measurement Unit (IMU) and developed a functional prototype. In collaboration with stakeholders, I co-authored the functional specifications using Agile methodology, managing task planning and delegation within the team. I also conducted patent research and carried out a state-of-the-art review of existing implantable IMU solutions already on the market. Additionally, I created the technical architecture of the system, ensuring compliance with ISO 13485, ISO 14971, and CE standards. Throughout the project, I applied relevant standards, including IEC 62304, IEC 60601, and IEC 62366, to ensure software quality, safety, and usability. As part of this project, I also participated in the Med'Ing Hack 2024 health hackathon, where my team and I were awarded first prize for our innovative solution.";
-        projectImage = "assets/images/cii_illustration.jpg";
-        break;
-      case 2:
-        projectTitle = "Segmentation of surgical movements using JIGSAWS datasets";
-        projectDescription = "Segmentation of surgical gestures is essential for improving the quality of the gestures, enhancing safety, and analyzing the performance of surgeons. By identifying critical points and suggesting areas for improvement, segmentation allows for a detailed evaluation of the surgical process. This idea is based on a study published by Despinoy et al. (2015), titled 'Unsupervised Trajectory Segmentation for Surgical Gesture Recognition in Robotic Training', which introduced a series of tasks to segment gestures and perform gesture recognition. During this project, I conducted a state-of-the-art review of AI applications in medicine and attempted to reproduce the experiment using more optimized deep learning algorithms. The project is still ongoing, and the results are expected to be available in January. This work was developed as part of a school module called Surgical Robotics, at the end of which a research paper is expected and will be presented to a jury.";
-        projectImage = "assets/images/jigsaws_illustration.png";
-        break;
-      case 3:
-        projectTitle = "Research Internship – TransRad Team, MR-IQ Project, Luxembourg Institute of Health (LIH) July – August 2024 | Supervisor: Dr. Keunen | Co-author of a research paper, publication expected in 2025";
-        projectDescription = "During my research internship at the Luxembourg Institute of Health, I contributed to the MR-IQ Project under the supervision of Dr. Keunen. My main responsibility involved collecting, transforming, and formatting medical images (MRI, PET, X-ray) into datasets (DICOM, MRD) using Python. These images came from various universities, including Bergen, Valencia, and Stanford. I applied image degradation techniques, such as blur, contrast adjustments, motion artifacts, and noise, using image processing algorithms in Jupyter Notebook. I also developed a Google Form and PowerPoint presentation to facilitate expert evaluation of 600 degraded MRI cases, utilizing Non-Referenced Image Quality Assessment (NR-iQA) methods. In addition, I conducted statistical analysis and authored reports in LaTeX via Overleaf. My work contributed to ongoing research, and I will be a co-author in the upcoming publication expected in 2025.";
-        projectImage = "assets/images/lih_illustration.JPG";
-        break;
-      case 4:
-        projectTitle = " School Project - Bionic Hand";
-        projectDescription = "This project was proposed in the context of several failed attempts by previous groups. My team and I aimed to review and reorganize the previous work, identify useful elements, and structure it into smaller projects to be proposed to next year's teams. My principal preoccupation was to identify the parts that had been the most developed by previous groups, such as the in-house printed electronic circuit. Over the two months we worked on this, we divided the tasks into four main areas: mechanics, electronics, data acquisition (focusing on anatomical aspects), and software. As the project lead, I was involved in all parts, but I focused more on refining the electronic circuit and improving the data acquisition processes. I redesigned the PCB based on feedback from previous teams and learned how to optimize EMG placement for maximum efficiency. All the work has been documented, achrived and pulled on GitHub repository, available for futur groups. From our work, we successfully developed six smaller projects that can be assigned to other groups(2 on IT, 1 on data aquisition, 1 on electronic, 1 on mechanic and 1 on regulatory affairs). Two summer interns have worked on one of these projects, and a new group is currently working on the acquisition project that we developed";
-        projectImage = "assets/images/mainbioniq.jpg";
-        break;
-      case 5:
-        projectTitle = " School Project - EEG for keyword application";
-        projectDescription = "During the module named 'Biosignal Processing,' we had the opportunity to learn more about signal acquisition, time analysis, frequency analysis, and digital filters. The goal of this module, apart from learning the different aspects of signal processing, was to ultimately create a MATLAB program to analyze provided signals and draw conclusions about their nature. To achieve this, I used various basic MATLAB functions (fft, ifft, etc.) to process the signals and plot them, resulting in the illustrative picture above. The signals were recorded from EEG, and our goal was to prepare them to be used for point detection, enabling the control of a keyboard solely by watching on a particular key for a certain period of time.";
-        projectImage = "assets/images/biosignal_processing.jpg";
-        break;
-      //case 6:
-        //projectTitle = " Bone Fracture detection";
-        //projectDescription = "";
-        //projectImage = "assets/images/lih_illustration.JPG";
-        //break;-->
-    }
-
-    // Mettre à jour le contenu de la modale
-    document.getElementById("modalProjectTitle").textContent = projectTitle;
-    document.getElementById("modalProjectDescription").textContent = projectDescription;
-    document.getElementById("modalProjectImage").src = projectImage;
-  }
-</script>
-
-
-
-
-
-
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
   <script>
-    // Pour les clics sur mobile
+    function showProjectDetails(projectId) {
+      var projectTitle = "";
+      var projectDescription = "";
+      var projectImage = "";
+      var projectLink = ""; // Initialisation de projectLink
+
+      switch (projectId) {
+        case 1:
+          projectTitle = "Implantable Inertial Sensor - Chief Project – Collaboration with a start-up and an ENT surgeon |";
+          projectDescription = "This graduation project aims to create a proof-of-concept for an implantable muscle stimulator for patients who have lost the ability to speak following surgeries such as larynx cancer removal. As chief project, I led the development of an Implantable Movement Tracking System intended to restore motor functions. We are currently designing a concept using an Inertial Measurement Unit (IMU) and developed a functional prototype. In collaboration with stakeholders, I co-authored the functional specifications using Agile methodology, managing task planning and delegation within the team. I also conducted patent research and carried out a state-of-the-art review of existing implantable IMU solutions already on the market. Additionally, I created the technical architecture of the system, ensuring compliance with ISO 13485, ISO 14971, and CE standards. Throughout the project, I applied relevant standards, including IEC 62304, IEC 60601, and IEC 62366, to ensure software quality, safety, and usability. As part of this project, I also participated in the Med'Ing Hack 2024 health hackathon, where my team and I were awarded first prize for our innovative solution.";
+          projectImage = "assets/images/cii_illustration.jpg";
+          break;
+        case 2:
+          projectTitle = "Research Project - Multimodal Computer Vision and Speech Recognition Approach";
+          projectDescription = "This academic research project developed a multimodal system integrating speech recognition (Vosk) and computer vision (YOLOv8n with Intel RealSense camera) to control a UR robot through natural voice commands. The system combines verbal instructions with real-time object detection to enable the robot to locate and move objects to predefined locations in its workspace. Using Python for implementation, the project incorporates transformation matrices and robot calibration to ensure precise coordination between the vision system and robot movements. I obtained great results for the vision and speech recognition, available on the research paper that I have written";
+          projectImage = "assets/images/Setup_test.jpg"; 
+          projectLink = "assets/relatives_doc/Benidir_paper.pdf"; 
+          break;
+        case 3:
+          projectTitle = "Research Internship – TransRad Team, MR-IQ Project, Luxembourg Institute of Health (LIH)";
+          projectDescription = "During my research internship at the Luxembourg Institute of Health, I contributed to the MR-IQ Project under the supervision of Dr. Keunen. My main responsibility involved collecting, transforming, and formatting medical images (MRI, PET, X-ray) into datasets (DICOM, MRD) using Python. These images came from various universities, including Bergen, Valencia, and Stanford. I applied image degradation techniques, such as blur, contrast adjustments, motion artifacts, and noise, using image processing algorithms in Jupyter Notebook. I also developed a Google Form and PowerPoint presentation to facilitate expert evaluation of 600 degraded MRI cases, utilizing Non-Referenced Image Quality Assessment (NR-iQA) methods. In addition, I conducted statistical analysis and authored reports in LaTeX via Overleaf. My work contributed to ongoing research, and I will be a co-author in the upcoming publication expected in 2025.";
+          projectImage = "assets/images/lih_illustration.JPG";
+          break;
+        case 4:
+          projectTitle = "School Project - Bionic Hand";
+          projectDescription = "This project was proposed in the context of several failed attempts by previous groups. My team and I aimed to review and reorganize the previous work, identify useful elements, and structure it into smaller projects to be proposed to next year's teams. My principal preoccupation was to identify the parts that had been the most developed by previous groups, such as the in-house printed electronic circuit. Over the two months we worked on this, we divided the tasks into four main areas: mechanics, electronics, data acquisition (focusing on anatomical aspects), and software. As the project lead, I was involved in all parts, but I focused more on refining the electronic circuit and improving the data acquisition processes. All the work has been documented, archived and pulled on GitHub repository, available for future groups.";
+          projectImage = "assets/images/mainbioniq.jpg";
+          break;
+        case 5:
+          projectTitle = "School Project - EEG for keyword application";
+          projectDescription = "During the module named 'Biosignal Processing,' we had the opportunity to learn more about signal acquisition, time analysis, frequency analysis, and digital filters. The goal of this module, apart from learning the different aspects of signal processing, was to ultimately create a MATLAB program to analyze provided signals and draw conclusions about their nature. To achieve this, I used various basic MATLAB functions (fft, ifft, etc.) to process the signals and plot them, resulting in the illustrative picture above. The signals were recorded from EEG, and our goal was to prepare them to be used for point detection, enabling the control of a keyboard solely by watching on a particular key for a certain period of time.";
+          projectImage = "assets/images/biosignal_processing.jpg";
+          break;
+        case 6:
+          projectTitle = "Chat bot using an API and Llama";
+          projectDescription = "This is a personnal project that I did during my free time. The goal was to create a chat bot that can answer to some questions. The chat bot was created using an API (fast API) and Llama. The chat bot is able to address error,  The chat bot was created using Python in Linux environement (Ubuntu), using FastAPI, Llama adn Docker.";
+          break;
+        case 7:
+          projectTitle = "Classification of myocardis infarction risk with Machine Learning";
+          projectDescription = "This project, proposed in a module named 'AI for Healthcare', aimed to classify the risk to do a myocardial infarction based on a real anonymysed dataset of patients. The dataset was composed of 90 patients and 200 features. The goal of this project was to try differenct classifier, such as Support Vector Classifier, Random Forrest Classifier and logistic regression. The best classifier was the Random Forrest Classifier in order to get the best accuracy, precision, recall, ... I obtained a 82% accuracy using RFC, witha recall of 0.85 and a precision of 0.82. The project was done with Python and the libraries Numpy, Pandas, Matplotlib, Scikit-learn and Seaborn. "; 
+          projectImage = "assets/images/heart.jpg";
+          break;
+      }
+
+      const modalContent = document.getElementById("projectDetailsContent");
+      modalContent.style.opacity = "0";
+
+      setTimeout(() => {
+        document.getElementById("modalProjectTitle").textContent = projectTitle;
+        document.getElementById("modalProjectDescription").textContent = projectDescription;
+        document.getElementById("modalProjectImage").src = projectImage;
+
+        // Gestion du bouton "Voir l'article"
+        const projectDetailsContent = document.getElementById("projectDetailsContent");
+        // Supprimer les anciens boutons s'il y en a (pour éviter de dupliquer les boutons si on ouvre/ferme plusieurs fois le modal)
+        let existingLinkButton = document.getElementById('projectLinkButton');
+        if (existingLinkButton) {
+          projectDetailsContent.removeChild(existingLinkButton);
+        }
+
+        if (projectLink) { // Si projectLink est défini (donc pour le projet 2)
+          const linkButton = document.createElement('a');
+          linkButton.href = projectLink;
+          linkButton.textContent = "View Article"; // Texte du bouton
+          linkButton.classList.add('btn', 'btn-primary', 'mt-3'); // Classes Bootstrap pour le style
+          linkButton.target = "_blank"; // Pour ouvrir dans un nouvel onglet
+          linkButton.id = 'projectLinkButton'; // ID pour pouvoir le supprimer facilement après
+          projectDetailsContent.appendChild(linkButton); // Ajouter le bouton au contenu du modal
+        }
+
+        modalContent.style.opacity = "1";
+      }, 200);
+    }
+  </script>
+
+  <script>
     document.querySelectorAll('.section-hover').forEach(section => {
       section.addEventListener('click', function() {
         this.classList.toggle('open');
       });
     });
 
-    // Fonction pour vérifier si un élément est visible à l'écran
     function isElementInView(el) {
       const rect = el.getBoundingClientRect();
       return rect.top <= window.innerHeight && rect.bottom >= 0;
     }
 
-    // Ajouter la classe "visible" aux éléments qui sont dans la vue
     function handleScroll() {
       const sections = document.querySelectorAll('section');
       sections.forEach((section) => {
         if (isElementInView(section)) {
-          section.classList.add('visible'); // Ajoute la classe pour animer le texte
-        } else {
-          section.classList.remove('visible'); // Enlève la classe si l'élément est hors de la vue
+          section.classList.add('visible');
+          section.dataset.visible = 'true'; // Mark section as visible
         }
+        /* Suppression de cette ligne pour que la section reste visible */
+        // else if (section.dataset.visible !== 'true') { // Only remove visible class if not already marked as visible
+        //   section.classList.remove('visible');
+        // }
+
       });
     }
 
-    // Exécuter la fonction handleScroll lors du défilement
     window.addEventListener('scroll', handleScroll);
-
-    // Exécuter une première fois pour détecter les éléments visibles au chargement de la page
     document.addEventListener('DOMContentLoaded', handleScroll);
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const categories = document.querySelectorAll('.category-item');
+      const projectContainers = document.querySelectorAll('.projects-container');
+
+      function activateCategory(categoryElement) {
+        categories.forEach(cat => cat.classList.remove('active'));
+        projectContainers.forEach(container => container.classList.remove('active'));
+
+        categoryElement.classList.add('active');
+        const category = categoryElement.dataset.category;
+        const targetContainer = document.querySelector(`.${category}-projects`);
+        targetContainer.classList.add('active');
+      }
+
+      categories.forEach(category => {
+        category.addEventListener('click', () => { // On garde seulement l'événement 'click'
+          activateCategory(category);
+        });
+      });
+
+      if (categories.length > 0) {
+        activateCategory(categories[0]);
+      }
+    });
+
+    function handleResponsiveLayout() {
+      const width = window.innerWidth;
+      const projectItems = document.querySelectorAll('.project-item');
+
+      if (width <= 480) {
+        projectItems.forEach(item => {
+          item.style.flex = '0 1 100%';
+        });
+      } else if (width <= 768) {
+        projectItems.forEach(item => {
+          item.style.flex = '0 1 calc(50% - 20px)';
+        });
+      } else {
+        projectItems.forEach(item => {
+          item.style.flex = '0 1 calc(33.333% - 20px)';
+        });
+      }
+    }
+
+    window.addEventListener('resize', handleResponsiveLayout);
+    handleResponsiveLayout();
   </script>
 </body>
 </html>
