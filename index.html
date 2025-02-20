@@ -23,7 +23,7 @@
             <div class="intro-body">
               <div class="intro-section animated-text">
                 <p class="highlight-text">
-                  Engineering Student at ESIGELEC (Rouen, FRANCE), specializing in Medical Devices Engineering (ISYMED program)
+                  Engineering Student at ESIGELEC (Rouen, FRANCE), specializing in Medical Systems Engineering (ISYMED program)
                 </p>
               </div>
 
@@ -31,9 +31,9 @@
                 <h3>Background</h3>
                 <p class="description-text">
                   During my studies, I've developed a strong foundation in mathematics, advanced physics, computer sciences and engineering sciences. 
-                  I've had the opportunity to apply this knowledge in various medical device-related modules, focusing on research projects and medical compliance, 
+                  I've had the opportunity to apply this knowledge in various medical systems-related modules, focusing on research projects and medical compliance, 
                   including European norms compliance. On the projects that I have worked on, I have been able to develop my skills in project management, working in team.
-
+                  My current intrests are related to AI field, including deep learning, computer vision and speech recognition.
                 </p>
               </div>
 
@@ -129,8 +129,8 @@
         </div>
 
         <div class="projects-container personal-projects">
-          <article class="project-item empty-project">
-            <h3>Chat bot using an API and Llama (Soon)</h3>
+          <article class="project-item" id="project6">
+            <h3>CNN for covid-19 lesions segmentation</h3>
             <div class="project-description">
               <button class="btn" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(6)">See details</button>
             </div>
@@ -240,8 +240,9 @@
           projectImage = "assets/images/biosignal_processing.jpg";
           break;
         case 6:
-          projectTitle = "Chat bot using an API and Llama";
-          projectDescription = "This is a personnal project that I did during my free time. The goal was to create a chat bot that can answer to some questions. The chat bot was created using an API (fast API) and Llama. The chat bot is able to address error,  The chat bot was created using Python in Linux environement (Ubuntu), using FastAPI, Llama adn Docker.";
+          projectTitle = "CNN for covid-19 lesions segmentation";
+          projectDescription = "This project aimed to develop a COVID-19 lung lesion segmentation model using a public Kaggle dataset (https://www.kaggle.com/datasets/maedemaftouni/covid19-ct-scan-lesion-segmentation-dataset). I implemented a lightweight U-Net CNN architecture consisting of a 3-layer encoder (2 Conv2D, 1 MaxPooling), a 2-layer Conv2D bridge, and a 4-layer decoder (Conv2D transpose, concatenation, 2 Conv2D) with a Conv2D output layer. Due to computational constraints, I preprocessed the original 512×512×3 CT scans to 256×256×1 grayscale images, normalized the data, and converted them to .npy format. The dataset was split into 1091 training images and 137 testing images. Training with a batch size of 2 yielded promising results: training accuracy of 0.9909 (validation: 0.9899), dice coefficient of 0.6446 (validation: 0.6242), IoU of 0.5670 (validation: 0.5291), and loss of 0.0149 (validation: 0.0182). The model achieved peak performance at epoch 4. Testing metrics showed a loss of 0.0132, accuracy of 0.9920, IoU of 0.5129, and dice coefficient of 0.5897. While the high accuracy is encouraging, the moderate segmentation metrics suggest partial lesion detection capabilities. Future improvements could include implementing class imbalance-aware loss functions, exploring more complex architectures, and enhancing data augmentation techniques. ";
+          projectImage = "assets/images/cnn_covid.jpg";
           break;
         case 7:
           projectTitle = "Classification of myocardis infarction risk with Machine Learning";
