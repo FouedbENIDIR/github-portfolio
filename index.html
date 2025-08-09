@@ -1,194 +1,246 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <meta name="description" content="Portfolio of Foued BENIDIR - AI Engineer specialized in Deep Learning and Computer Vision">
+  <meta name="keywords" content="AI, Artificial Intelligence, Deep Learning, Computer Vision, Python, Medical AI, Machine Learning">
+  <meta name="author" content="Foued BENIDIR">
+  <meta property="og:title" content="Foued BENIDIR - AI & Data Science Portfolio">
+  <meta property="og:description" content="AI Engineer specialized in Deep Learning and Computer Vision, seeking PhD or R&D opportunities">
+  <meta property="og:type" content="website">
+  <title>Foued BENIDIR - AI & Data Science Portfolio</title>
+  
+  <!-- External CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <section id="presentation" class="container py-5 section-hover">
-      <h2 class="animated-text">Introduction</h2>
-      <div class="section-content">
-        <div class="intro-container">
-          <div class="intro-content">
-            <div class="intro-header animated-text">
-              <span class="greeting">Hi, I'm</span>
-              <span class="name">Foued BENIDIR</span>
-            </div>
-
-            <div class="intro-body">
-              <div class="intro-section animated-text">
-                <p class="highlight-text">
-                  Engineering Student at ESIGELEC (Rouen, FRANCE), specializing in Medical Systems Engineering (ISYMED program)
-                </p>
-              </div>
-
-              <div class="intro-section animated-text">
-                <h3>Background</h3>
-                <p class="description-text">
-                  During my studies, I've developed a strong foundation in mathematics, advanced physics, computer sciences and engineering sciences. 
-                  I've had the opportunity to apply this knowledge in various medical systems-related modules, focusing on research projects and medical compliance, 
-                  including European norms compliance. On the projects that I have worked on, I have been able to develop my skills in project management, working in team.
-                  My current intrests are related to AI field, including deep learning, computer vision and speech recognition.
-                </p>
-              </div>
-
-              <div class="intro-section animated-text">
-                <h3>Key Skills</h3>
-                <div class="skill-tags">
-                  <span class="skill-tag">Mathematics</span>
-                  <span class="skill-tag">Physics</span>
-                  <span class="skill-tag">IT</span>
-                  <span class="skill-tag">AI</span>
-                  <span class="skill-tag">Electronics</span>
-                  <span class="skill-tag">Computer Sciences</span>
-                  <span class="skill-tag">Engineering Sciences</span>
-                  <span class="skill-tag">Medical Compliance</span>
-                  <span class="skill-tag">Regulatory Affairs</span>
-                </div>
-              </div>
-
-              <div class="career-objective animated-text">
-                <h3>Career Objective</h3>
-                <p>
-                  Currently seeking a 4-6 months internship starting spring 2025 (or earlier if necessary) as an engineer. My goal is to contribute to meaningful projects including AI.  
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="cv" class="container py-5 section-hover">
-      <h2 class="animated-text">Resume</h2>
-      <div class="section-content">
-        <p class="animated-text">Download it here :</p>
-        <div style="text-align: center;">
-          <a href="assets/relatives_doc/CV_FB.pdf" class="btn" download>See my Resume</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="projets" class="container py-5 section-hover">
-      <h2 class="animated-text">Projects</h2>
-      <div class="section-content">
-        <div class="project-categories">
-          <div class="category-item" data-category="professional">
-            <h3>Professional Projects</h3>
-          </div>
-          <div class="category-item" data-category="academic">
-            <h3>Academic Projects</h3>
-          </div>
-          <div class="category-item" data-category="personal">
-            <h3>Personal Projects</h3>
-          </div>
-        </div>
-
-        <div class="projects-container professional-projects">
-          <article class="project-item" id="project3">
-            <h3>Data collection and Analysis</h3>
-            <div class="project-description">
-              <button class="btn" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(3)">See details</button>
-            </div>
-          </article>
-        </div>
-
-        <div class="projects-container academic-projects">
-          <article class="project-item" id="project1">
-            <h3>Implantable Inertial Sensor</h3>
-            <div class="project-description">
-              <button class="btn" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(1)">See details</button>
-            </div>
-          </article>
-
-          <article class="project-item" id="project2">
-            <h3>Research project multimodal Computer Vision and Speech Recognition approch</h3>
-            <div class="project-description">
-              <button class="btn" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(2)">See details</button>
-            </div>
-          </article>
-
-          <article class="project-item" id="project4">
-            <h3>Bionic Hand</h3>
-            <div class="project-description">
-              <button class="btn" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(4)">See details</button>
-            </div>
-          </article>
-
-          <article class="project-item" id="project5">
-            <h3>EEG signal processing</h3>
-            <div class="project-description">
-              <button class="btn" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(5)">See details</button>
-            </div>
-          </article>
-        </div>
-
-        <div class="projects-container personal-projects">
-          <article class="project-item" id="project6">
-            <h3>CNN for covid-19 lesions segmentation</h3>
-            <div class="project-description">
-              <button class="btn" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(6)">See details</button>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="projectModalLabel">Project Details</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div id="projectDetailsContent">
-              <h3 id="modalProjectTitle">Project Title</h3>
-              <img id="modalProjectImage" src="" alt="Project Image" class="img-fluid mb-3">
-              <p id="modalProjectDescription">Project description...</p>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
-        </div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#presentation">Foued BENIDIR</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#presentation">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#cv">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projets">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
       </div>
     </div>
+  </nav>
 
-    <section id="contact" class="container py-5 section-hover">
-      <h2 class="animated-text">Contact</h2>
+  <main>
+    <!-- Introduction Section -->
+    <section id="presentation" class="container section-animation">
+      <h2>About Me</h2>
+      <div class="intro-container">
+        <div class="intro-content">
+          <div class="intro-header">
+            <span class="greeting">Hello, I'm</span>
+            <span class="name">Foued BENIDIR</span>
+          </div>
+          
+          <div class="intro-body">
+            <div class="intro-section">
+              <h3>Key Skills</h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Deep Learning</span>
+                <span class="skill-tag">Computer Vision</span>
+                <span class="skill-tag">Signal Processing</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Medical AI</span>
+                <span class="skill-tag">R&D</span>
+                <span class="skill-tag">Medical & Pharmaceutical Compliance</span>
+                <span class="skill-tag">Data Analysis</span>
+                <span class="skill-tag">Agile Methodology</span>
+              </div>
+            </div>
+            
+            <div class="career-objective">
+              <h3>Career Objective</h3>
+              <p>
+                Currently seeking a PhD position or R&D Engineer role in Artificial Intelligence, particularly focused on AI applications in healthcare. I'm passionate about developing innovative AI solutions that can make a real impact in medical diagnosis, treatment, and patient care. My goal is to contribute to cutting-edge research that bridges the gap between advanced AI technologies and practical medical applications.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="cv" class="container section-animation">
+      <h2>Resume</h2>
       <div class="section-content">
-        <div class="contact-container">
+        <p>Download my complete resume to learn more about my experience and qualifications.</p>
+        <a href="assets/relatives_doc/CV_Foued_BENIDIR.pdf" class="btn-primary-custom" download>
+          <i class="fas fa-download"></i> Download My Resume
+        </a>
+      </div>
+    </section>
 
-          <div class="contact-info">
-            <h3 class="animated-text">Contact Information</h3>
-            <div class="info-group animated-text">
-              <i class="fas fa-envelope"></i>
-              <div class="info-content">
-                <h4>Email</h4>
-                <a href="mailto:foued.benidir@groupe-esigelec.org">fouedbenidir24@gmail.com</a>
-              </div>
+    <!-- Projects Section -->
+    <section id="projets" class="container section-animation">
+      <h2>Projects</h2>
+      
+      <div class="project-categories">
+        <div class="category-item active" data-category="professional">
+          <h3>Professional Projects</h3>
+        </div>
+        <div class="category-item" data-category="academic">
+          <h3>Academic Projects</h3>
+        </div>
+        <div class="category-item" data-category="personal">
+          <h3>Personal Projects</h3>
+        </div>
+      </div>
+
+      <!-- Professional Projects -->
+      <div class="projects-container professional-projects active">
+        <article class="project-item" id="project8">
+          <h3>AI Confluency Estimation – GSK Wavre</h3>
+          <div class="project-description">
+            <button class="btn-secondary-custom" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(8)">
+              View Details
+            </button>
+          </div>
+        </article>
+
+        <article class="project-item" id="project9">
+          <h3>Data Analysis – GSK Wavre</h3>
+          <div class="project-description">
+            <button class="btn-secondary-custom" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(9)">
+              View Details
+            </button>
+          </div>
+        </article>
+
+        <article class="project-item" id="project3">
+          <h3>Data Processing and Analysis – LIH</h3>
+          <div class="project-description">
+            <button class="btn-secondary-custom" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(3)">
+              View Details
+            </button>
+          </div>
+        </article>
+
+        <article class="project-item" id="project7">
+          <h3>Classification of Myocardial Infarction Risk</h3>
+          <div class="project-description">
+            <button class="btn-secondary-custom" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(7)">
+              View Details
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Academic Projects -->
+      <div class="projects-container academic-projects">
+        <article class="project-item" id="project1">
+          <h3>Implantable Inertial Sensor</h3>
+          <div class="project-description">
+            <button class="btn-secondary-custom" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(1)">
+              View Details
+            </button>
+          </div>
+        </article>
+
+        <article class="project-item" id="project2">
+          <h3>Multimodal Computer Vision & Speech Recognition</h3>
+          <div class="project-description">
+            <button class="btn-secondary-custom" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(2)">
+              View Details
+            </button>
+          </div>
+        </article>
+
+        <article class="project-item" id="project4">
+          <h3>Bionic Hand</h3>
+          <div class="project-description">
+            <button class="btn-secondary-custom" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(4)">
+              View Details
+            </button>
+          </div>
+        </article>
+
+        <article class="project-item" id="project5">
+          <h3>EEG for Keyword Application</h3>
+          <div class="project-description">
+            <button class="btn-secondary-custom" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(5)">
+              View Details
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Personal Projects -->
+      <div class="projects-container personal-projects">
+        <article class="project-item" id="project6">
+          <h3>CNN for COVID-19 Lesions Segmentation</h3>
+          <div class="project-description">
+            <button class="btn-secondary-custom" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectDetails(6)">
+              View Details
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container section-animation">
+      <h2>Contact</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+          
+          <div class="info-group">
+            <i class="fas fa-envelope"></i>
+            <div class="info-content">
+              <h4>Email</h4>
+              <a href="mailto:fouedbenidir24@gmail.com">fouedbenidir24@gmail.com</a>
             </div>
+          </div>
 
-            <div class="info-group animated-text">
-              <i class="fas fa-phone"></i>
-              <div class="info-content">
-                <h4>Phone</h4>
-                <p>+33 6 79 29 54 13</p>
-              </div>
+          <div class="info-group">
+            <i class="fas fa-phone"></i>
+            <div class="info-content">
+              <h4>Phone</h4>
+              <p>+33 6 79 29 54 13</p>
             </div>
+          </div>
 
-            <div class="info-group animated-text">
-              <i class="fab fa-linkedin"></i>
-              <div class="info-content">
-                <h4>LinkedIn</h4>
-                <a href="https://www.linkedin.com/in/foued-benidir-250b73178/" target="_blank">Foued BENIDIR</a>
-              </div>
+          <div class="info-group">
+            <i class="fab fa-linkedin"></i>
+            <div class="info-content">
+              <h4>LinkedIn</h4>
+              <a href="https://www.linkedin.com/in/foued-benidir-250b73178/" target="_blank" rel="noopener noreferrer">
+                Foued BENIDIR
+              </a>
+            </div>
+          </div>
+
+          <div class="info-group">
+            <i class="fab fa-github"></i>
+            <div class="info-content">
+              <h4>GitHub</h4>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                View My Projects
+              </a>
             </div>
           </div>
         </div>
@@ -196,170 +248,233 @@
     </section>
   </main>
 
-  <footer class="py-3">
-    <p class="text-center">
-      Foued BENIDIR - 2024
-    </p>
+  <!-- Project Details Modal -->
+  <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalProjectTitle">Project Title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="projectDetailsContent">
+          <img id="modalProjectImage" src="" alt="" class="img-fluid">
+          <p id="modalProjectDescription"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Foued BENIDIR - Portfolio</p>
+    </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
   <script>
-    function showProjectDetails(projectId) {
-      var projectTitle = "";
-      var projectDescription = "";
-      var projectImage = "";
-      var projectLink = ""; // Initialisation de projectLink
+    // Complete projects data with full descriptions
+    const projects = {
+      1: {
+        title: "Implantable Inertial Sensor",
+        description: "Proof-of-concept for an implantable movement tracking system using IMU (Inertial Measurement Unit) technology. This innovative project was developed in compliance with medical standards and was awarded at the Med'Ing Hackathon 2024. The system demonstrates the potential for advanced motion tracking in medical applications, providing precise movement data for patient monitoring and rehabilitation assessment.",
+        image: "assets/images/cii_illustration.jpg"
+      },
+      2: {
+        title: "Multimodal Computer Vision & Speech Recognition",
+        description: "Advanced robotics project combining YOLOv8 object detection and Vosk speech recognition to create an intelligent robot control system. Implemented in Python with sophisticated matrix transformations for precise UR robot manipulation. This multimodal approach enables natural human-robot interaction through both voice commands and visual perception. Research paper submitted for publication documenting the innovative approach and results.",
+        image: "assets/images/Setup_test.jpg",
+        link: "assets/relatives_doc/Benidir_paper.pdf"
+      },
+      3: {
+        title: "MR-IQ Project – Luxembourg Institute of Health",
+        description: "Comprehensive medical image processing pipeline for MRI, PET, and other medical imaging modalities. Key responsibilities included dataset formatting, image degradation simulation, and implementation of No-Reference Image Quality Assessment (NR-iQA) algorithms. Contributed to scientific documentation using LaTeX and co-authored a research paper (2025). This project advances the field of medical image quality assessment, crucial for diagnostic accuracy.",
+        image: "assets/images/lih_illustration.JPG"
+      },
+      4: {
+        title: "Bionic Hand",
+        description: "Complete redesign and documentation of an EMG-controlled prosthetic hand. This multidisciplinary project involved mechanical design, electronics integration, data acquisition systems, and software development. Coordinated all aspects to create a functional biomedical device that responds to muscle signals, providing amputees with improved functionality and control. The project demonstrates expertise in biomechanical engineering and signal processing.",
+        image: "assets/images/mainbioniq.jpg"
+      },
+      5: {
+        title: "EEG for Keyword Application",
+        description: "MATLAB-based signal processing and classification system to control a virtual keyboard through EEG visual fixation patterns. This brain-computer interface project involved advanced signal processing techniques to interpret brain activity and translate it into keyboard commands. The system enables hands-free typing for individuals with motor disabilities, demonstrating the potential of EEG technology in assistive applications.",
+        image: "assets/images/biosignal_processing.jpg"
+      },
+      6: {
+        title: "CNN for COVID-19 Lesions Segmentation",
+        description: "Deep learning project implementing a U-Net based convolutional neural network for COVID-19 lesion segmentation in chest imaging. Developed using TensorFlow on a Kaggle dataset, the project involved comprehensive data normalization, augmentation strategies, model training, and evaluation. Achieved high accuracy through careful metric optimization, contributing to automated COVID-19 diagnosis tools.",
+        image: "assets/images/cnn_covid.jpg"
+      },
+      7: {
+        title: "Classification of Myocardial Infarction Risk",
+        description: "Academic machine learning project focused on predicting heart disease risk using patient data. Implemented comprehensive data preprocessing including one-hot encoding and feature engineering. Compared multiple ML algorithms including SVC, Random Forest, XGBoost, and Logistic Regression. Conducted thorough analysis using metrics such as accuracy, recall, F1-Score, and precision to identify the optimal model for clinical decision support.",
+        image: "assets/images/heart.jpg"
+      },
+      8: {
+        title: "AI Confluency Estimation – GSK Wavre",
+        description: "During my end-of-studies internship at GlaxoSmithKline (GSK) Wavre, I developed an AI-powered model to estimate cell culture confluency for vaccine production. Led the complete workflow from initial data collection with production experts to comprehensive literature review, advanced image processing, and deep learning model selection. Delivered a Python-based solution with an intuitive user interface, enabling operators to perform accurate and efficient confluency assessments, significantly improving production monitoring and quality control.",
+        image: "assets/images/gsk_confluency.jpg"
+      },
+      9: {
+        title: "Data Analysis – GSK Wavre",
+        description: "Comprehensive data analysis project during my internship at GlaxoSmithKline (GSK) focusing on vaccine batch optimization. Conducted exploratory data analysis, implemented PCA for dimensionality reduction, and performed extensive data cleaning on production datasets. Applied various machine learning techniques to predict batch outcomes and identify key performance indicators. Delivered actionable recommendations that improved production efficiency and reduced batch failure rates.",
+        image: "assets/images/gsk_confluency.jpg"
+      }
+    };
 
-      switch (projectId) {
-        case 1:
-          projectTitle = "Implantable Inertial Sensor - Chief Project – Collaboration with a start-up and an ENT surgeon |";
-          projectDescription = "This graduation project aims to create a proof-of-concept for an implantable muscle stimulator for patients who have lost the ability to speak following surgeries such as larynx cancer removal. As chief project, I led the development of an Implantable Movement Tracking System intended to restore motor functions. We are currently designing a concept using an Inertial Measurement Unit (IMU) and developed a functional prototype. In collaboration with stakeholders, I co-authored the functional specifications using Agile methodology, managing task planning and delegation within the team. I also conducted patent research and carried out a state-of-the-art review of existing implantable IMU solutions already on the market. Additionally, I created the technical architecture of the system, ensuring compliance with ISO 13485, ISO 14971, and CE standards. Throughout the project, I applied relevant standards, including IEC 62304, IEC 60601, and IEC 62366, to ensure software quality, safety, and usability. As part of this project, I also participated in the Med'Ing Hack 2024 health hackathon, where my team and I were awarded first prize for our innovative solution.";
-          projectImage = "assets/images/cii_illustration.jpg";
-          break;
-        case 2:
-          projectTitle = "Research Project - Multimodal Computer Vision and Speech Recognition Approach";
-          projectDescription = "This academic research project developed a multimodal system integrating speech recognition (Vosk) and computer vision (YOLOv8n with Intel RealSense camera) to control a UR robot through natural voice commands. The system combines verbal instructions with real-time object detection to enable the robot to locate and move objects to predefined locations in its workspace. Using Python for implementation, the project incorporates transformation matrices and robot calibration to ensure precise coordination between the vision system and robot movements. I obtained great results for the vision and speech recognition, available on the research paper that I have written";
-          projectImage = "assets/images/Setup_test.jpg"; 
-          projectLink = "assets/relatives_doc/Benidir_paper.pdf"; 
-          break;
-        case 3:
-          projectTitle = "Research Internship – TransRad Team, MR-IQ Project, Luxembourg Institute of Health (LIH)";
-          projectDescription = "During my research internship at the Luxembourg Institute of Health, I contributed to the MR-IQ Project under the supervision of Dr. Keunen. My main responsibility involved collecting, transforming, and formatting medical images (MRI, PET, X-ray) into datasets (DICOM, MRD) using Python. These images came from various universities, including Bergen, Valencia, and Stanford. I applied image degradation techniques, such as blur, contrast adjustments, motion artifacts, and noise, using image processing algorithms in Jupyter Notebook. I also developed a Google Form and PowerPoint presentation to facilitate expert evaluation of 600 degraded MRI cases, utilizing Non-Referenced Image Quality Assessment (NR-iQA) methods. In addition, I conducted statistical analysis and authored reports in LaTeX via Overleaf. My work contributed to ongoing research, and I will be a co-author in the upcoming publication expected in 2025.";
-          projectImage = "assets/images/lih_illustration.JPG";
-          break;
-        case 4:
-          projectTitle = "School Project - Bionic Hand";
-          projectDescription = "This project was proposed in the context of several failed attempts by previous groups. My team and I aimed to review and reorganize the previous work, identify useful elements, and structure it into smaller projects to be proposed to next year's teams. My principal preoccupation was to identify the parts that had been the most developed by previous groups, such as the in-house printed electronic circuit. Over the two months we worked on this, we divided the tasks into four main areas: mechanics, electronics, data acquisition (focusing on anatomical aspects), and software. As the project lead, I was involved in all parts, but I focused more on refining the electronic circuit and improving the data acquisition processes. All the work has been documented, archived and pulled on GitHub repository, available for future groups.";
-          projectImage = "assets/images/mainbioniq.jpg";
-          break;
-        case 5:
-          projectTitle = "School Project - EEG for keyword application";
-          projectDescription = "During the module named 'Biosignal Processing,' we had the opportunity to learn more about signal acquisition, time analysis, frequency analysis, and digital filters. The goal of this module, apart from learning the different aspects of signal processing, was to ultimately create a MATLAB program to analyze provided signals and draw conclusions about their nature. To achieve this, I used various basic MATLAB functions (fft, ifft, etc.) to process the signals and plot them, resulting in the illustrative picture above. The signals were recorded from EEG, and our goal was to prepare them to be used for point detection, enabling the control of a keyboard solely by watching on a particular key for a certain period of time.";
-          projectImage = "assets/images/biosignal_processing.jpg";
-          break;
-        case 6:
-          projectTitle = "CNN for covid-19 lesions segmentation";
-          projectDescription = "This project aimed to develop a COVID-19 lung lesion segmentation model using a public Kaggle dataset (https://www.kaggle.com/datasets/maedemaftouni/covid19-ct-scan-lesion-segmentation-dataset). I implemented a lightweight U-Net CNN architecture consisting of a 3-layer encoder (2 Conv2D, 1 MaxPooling), a 2-layer Conv2D bridge, and a 4-layer decoder (Conv2D transpose, concatenation, 2 Conv2D) with a Conv2D output layer. Due to computational constraints, I preprocessed the original 512×512×3 CT scans to 256×256×1 grayscale images, normalized the data, and converted them to .npy format. The dataset was split into 1091 training images and 137 testing images. Training with a batch size of 2 yielded promising results: training accuracy of 0.9909 (validation: 0.9899), dice coefficient of 0.6446 (validation: 0.6242), IoU of 0.5670 (validation: 0.5291), and loss of 0.0149 (validation: 0.0182). The model achieved peak performance at epoch 4. Testing metrics showed a loss of 0.0132, accuracy of 0.9920, IoU of 0.5129, and dice coefficient of 0.5897. While the high accuracy is encouraging, the moderate segmentation metrics suggest partial lesion detection capabilities. Future improvements could include implementing class imbalance-aware loss functions, exploring more complex architectures, and enhancing data augmentation techniques. ";
-          projectImage = "assets/images/cnn_covid.jpg";
-          break;
-        case 7:
-          projectTitle = "Classification of myocardis infarction risk with Machine Learning";
-          projectDescription = "This project, proposed in a module named 'AI for Healthcare', aimed to classify the risk to do a myocardial infarction based on a real anonymysed dataset of patients. The dataset was composed of 90 patients and 200 features. The goal of this project was to try differenct classifier, such as Support Vector Classifier, Random Forrest Classifier and logistic regression. The best classifier was the Random Forrest Classifier in order to get the best accuracy, precision, recall, ... I obtained a 82% accuracy using RFC, witha recall of 0.85 and a precision of 0.82. The project was done with Python and the libraries Numpy, Pandas, Matplotlib, Scikit-learn and Seaborn. "; 
-          projectImage = "assets/images/heart.jpg";
-          break;
+    // Show project details in modal
+    function showProjectDetails(projectId) {
+      const project = projects[projectId];
+      if (!project) {
+        console.error(`Project with ID ${projectId} not found`);
+        return;
       }
 
-      const modalContent = document.getElementById("projectDetailsContent");
-      modalContent.style.opacity = "0";
+      document.getElementById("modalProjectTitle").textContent = project.title;
+      document.getElementById("modalProjectDescription").textContent = project.description;
+      
+      const imageElement = document.getElementById("modalProjectImage");
+      imageElement.src = project.image;
+      imageElement.alt = `${project.title} illustration`;
 
-      setTimeout(() => {
-        document.getElementById("modalProjectTitle").textContent = projectTitle;
-        document.getElementById("modalProjectDescription").textContent = projectDescription;
-        document.getElementById("modalProjectImage").src = projectImage;
+      // Remove existing link button if any
+      const existingLink = document.getElementById("projectLinkButton");
+      if (existingLink) existingLink.remove();
 
-        // Gestion du bouton "Voir l'article"
-        const projectDetailsContent = document.getElementById("projectDetailsContent");
-        // Supprimer les anciens boutons s'il y en a (pour éviter de dupliquer les boutons si on ouvre/ferme plusieurs fois le modal)
-        let existingLinkButton = document.getElementById('projectLinkButton');
-        if (existingLinkButton) {
-          projectDetailsContent.removeChild(existingLinkButton);
-        }
-
-        if (projectLink) { // Si projectLink est défini (donc pour le projet 2)
-          const linkButton = document.createElement('a');
-          linkButton.href = projectLink;
-          linkButton.textContent = "View Article"; // Texte du bouton
-          linkButton.classList.add('btn', 'btn-primary', 'mt-3'); // Classes Bootstrap pour le style
-          linkButton.target = "_blank"; // Pour ouvrir dans un nouvel onglet
-          linkButton.id = 'projectLinkButton'; // ID pour pouvoir le supprimer facilement après
-          projectDetailsContent.appendChild(linkButton); // Ajouter le bouton au contenu du modal
-        }
-
-        modalContent.style.opacity = "1";
-      }, 200);
+      // Add link button if available
+      if (project.link) {
+        const linkButton = document.createElement("a");
+        linkButton.href = project.link;
+        linkButton.target = "_blank";
+        linkButton.rel = "noopener noreferrer";
+        linkButton.textContent = "View Publication";
+        linkButton.className = "btn-primary-custom mt-3";
+        linkButton.id = "projectLinkButton";
+        document.getElementById("projectDetailsContent").appendChild(linkButton);
+      }
     }
-  </script>
 
-  <script>
-    document.querySelectorAll('.section-hover').forEach(section => {
-      section.addEventListener('click', function() {
-        this.classList.toggle('open');
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('mainNav');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Section animations on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.section-animation').forEach(section => {
+      observer.observe(section);
+    });
+
+    // Active nav link highlighting
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (scrollY >= (sectionTop - 200)) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === current) {
+          link.classList.add('active');
+        }
       });
     });
 
-    function isElementInView(el) {
-      const rect = el.getBoundingClientRect();
-      return rect.top <= window.innerHeight && rect.bottom >= 0;
-    }
-
-    function handleScroll() {
-      const sections = document.querySelectorAll('section');
-      sections.forEach((section) => {
-        if (isElementInView(section)) {
-          section.classList.add('visible');
-          section.dataset.visible = 'true'; // Mark section as visible
-        }
-        /* Suppression de cette ligne pour que la section reste visible */
-        // else if (section.dataset.visible !== 'true') { // Only remove visible class if not already marked as visible
-        //   section.classList.remove('visible');
-        // }
-
-      });
-    }
-
-    window.addEventListener('scroll', handleScroll);
-    document.addEventListener('DOMContentLoaded', handleScroll);
-  </script>
-
-  <script>
+    // Project categories management
     document.addEventListener('DOMContentLoaded', function() {
       const categories = document.querySelectorAll('.category-item');
       const projectContainers = document.querySelectorAll('.projects-container');
 
       function activateCategory(categoryElement) {
+        // Remove active class from all
         categories.forEach(cat => cat.classList.remove('active'));
         projectContainers.forEach(container => container.classList.remove('active'));
 
+        // Add active class to selected
         categoryElement.classList.add('active');
         const category = categoryElement.dataset.category;
         const targetContainer = document.querySelector(`.${category}-projects`);
-        targetContainer.classList.add('active');
+        if (targetContainer) {
+          targetContainer.classList.add('active');
+        }
       }
 
       categories.forEach(category => {
-        category.addEventListener('click', () => { // On garde seulement l'événement 'click'
+        category.addEventListener('click', () => {
           activateCategory(category);
         });
+        
+        // Keyboard support
+        category.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            activateCategory(category);
+          }
+        });
+        
+        // Make focusable
+        category.setAttribute('tabindex', '0');
+        category.setAttribute('role', 'button');
       });
 
-      if (categories.length > 0) {
-        activateCategory(categories[0]);
-      }
+      // Handle image errors gracefully
+      document.getElementById("modalProjectImage").addEventListener('error', function() {
+        this.style.display = 'none';
+      });
     });
 
-    function handleResponsiveLayout() {
-      const width = window.innerWidth;
-      const projectItems = document.querySelectorAll('.project-item');
+    // Mobile menu close on link click
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const navLinksMobile = document.querySelectorAll('.navbar-nav .nav-link');
 
-      if (width <= 480) {
-        projectItems.forEach(item => {
-          item.style.flex = '0 1 100%';
-        });
-      } else if (width <= 768) {
-        projectItems.forEach(item => {
-          item.style.flex = '0 1 calc(50% - 20px)';
-        });
-      } else {
-        projectItems.forEach(item => {
-          item.style.flex = '0 1 calc(33.333% - 20px)';
-        });
-      }
-    }
+    navLinksMobile.forEach(link => {
+      link.addEventListener('click', () => {
+        if (navbarCollapse.classList.contains('show')) {
+          navbarCollapse.classList.remove('show');
+        }
+      });
+    });
 
-    window.addEventListener('resize', handleResponsiveLayout);
-    handleResponsiveLayout();
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const offsetTop = target.offsetTop - 80;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
   </script>
 </body>
 </html>
