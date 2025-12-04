@@ -2,9 +2,14 @@
    CSS Variables
    =================================== */
 :root {
-  --primary-blue: #1b2a68;
-  --secondary-blue: #2b448e;
-  --accent-blue: #1a38ad;
+  --primary-blue: #e8eef5;
+  --secondary-blue: #f5f7fa;
+  --accent-blue: #d4e4f7;
+  --text-dark: #2c3e50;
+  --text-medium: #5a6c7d;
+  --text-light: #8899a8;
+  --blue-accent: #5b9bd5;
+  --blue-light: #a8d1f0;
   --white: #ffffff;
   --white-90: rgba(255, 255, 255, 0.9);
   --white-85: rgba(255, 255, 255, 0.85);
@@ -17,9 +22,11 @@
   --black-10: rgba(0, 0, 0, 0.1);
   --black-15: rgba(0, 0, 0, 0.15);
   --black-20: rgba(0, 0, 0, 0.2);
-  --gradient-blue: linear-gradient(135deg, #5e72eb, #a78bfa);
-  --gradient-blue-hover: linear-gradient(135deg, #7b8ffc, #c4a8ff);
-  --gradient-main: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue), var(--accent-blue));
+  --gray-light: rgba(0, 0, 0, 0.04);
+  --gray-medium: rgba(0, 0, 0, 0.08);
+  --gradient-blue: linear-gradient(135deg, #5b9bd5, #7eb8e8);
+  --gradient-blue-hover: linear-gradient(135deg, #4a8bc5, #6aa8d8);
+  --gradient-main: linear-gradient(135deg, #f5f7fa, #e8eef5, #d4e4f7);
   --font-family: 'Raleway', sans-serif;
   --transition-fast: 0.3s;
   --transition-normal: 0.4s;
@@ -49,7 +56,7 @@ body {
   font-family: var(--font-family);
   background: var(--gradient-main);
   background-attachment: fixed;
-  color: var(--white);
+  color: var(--text-dark);
   min-height: 100vh;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -64,10 +71,10 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(27, 42, 104, 0.95) !important;
+  background: rgba(91, 155, 213, 0.95) !important;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px var(--black-20);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
   padding: 1rem 0;
   z-index: 1000;
   transition: all var(--transition-normal);
@@ -75,7 +82,7 @@ body {
 
 .navbar.scrolled {
   padding: 0.5rem 0;
-  background: rgba(27, 42, 104, 0.98) !important;
+  background: rgba(91, 155, 213, 0.98) !important;
 }
 
 .navbar-brand {
@@ -103,7 +110,7 @@ body {
 }
 
 .navbar-nav .nav-link {
-  color: var(--white-90) !important;
+  color: rgba(255, 255, 255, 0.85) !important;
   font-size: 1.05rem;
   padding: 0.5rem 1.2rem;
   margin: 0 0.3rem;
@@ -115,7 +122,7 @@ body {
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
   color: var(--white) !important;
-  background: var(--white-15);
+  background: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
 }
 
@@ -152,7 +159,7 @@ section::before {
   position: absolute;
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, transparent, var(--white), transparent);
+  background: linear-gradient(90deg, transparent, var(--blue-accent), transparent);
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
@@ -168,7 +175,7 @@ section h2 {
   font-size: 2.8rem;
   margin-bottom: 3rem;
   font-weight: 600;
-  background: linear-gradient(135deg, #fff, var(--white-85));
+  background: linear-gradient(135deg, var(--text-dark), var(--blue-accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -198,7 +205,7 @@ section h2 {
 .greeting {
   display: block;
   font-size: 1.8rem;
-  color: var(--white-90);
+  color: var(--text-medium);
   margin-bottom: 0.5rem;
   font-weight: 300;
   animation: slideInLeft 0.6s ease;
@@ -225,7 +232,7 @@ section h2 {
 .intro-section h3 {
   text-align: center;
   margin-bottom: 2rem;
-  color: var(--white);
+  color: var(--text-dark);
   font-size: 1.8rem;
   font-weight: 500;
 }
@@ -243,58 +250,60 @@ section h2 {
 }
 
 .skill-tag {
-  background: var(--white-12);
+  background: var(--white);
   padding: 12px 24px;
   border-radius: var(--border-radius-pill);
   font-size: 1rem;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-  color: var(--white);
+  color: var(--text-dark);
   font-weight: 400;
   transition: all var(--transition-fast);
   cursor: default;
-  border: 1px solid var(--white-10);
+  border: 1px solid var(--black-10);
+  box-shadow: var(--shadow-sm);
 }
 
 .skill-tag:hover {
-  background: var(--white-20);
+  background: var(--blue-light);
   transform: translateY(-3px) scale(1.05);
   box-shadow: var(--shadow-md);
-  border-color: var(--white-20);
+  border-color: var(--blue-accent);
 }
 
 /* ===================================
    Career Objective
    =================================== */
 .career-objective {
-  background: var(--white-08);
+  background: var(--white);
   padding: 2.5rem;
   border-radius: var(--border-radius);
   margin: 3rem 0;
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
-  border: 1px solid var(--white-10);
+  border: 1px solid var(--black-10);
   transition: all var(--transition-normal);
   animation: fadeInUp 0.8s ease 0.5s both;
+  box-shadow: var(--shadow-sm);
 }
 
 .career-objective:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
-  background: var(--white-12);
+  background: var(--white);
 }
 
 .career-objective h3 {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
-  color: var(--white);
+  color: var(--text-dark);
   font-weight: 500;
 }
 
 .career-objective p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: var(--white-90);
+  color: var(--text-medium);
   font-weight: 300;
 }
 
@@ -308,7 +317,7 @@ section h2 {
 #cv p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: var(--white-90);
+  color: var(--text-medium);
 }
 
 /* ===================================
@@ -328,22 +337,23 @@ section h2 {
   position: relative;
   transition: all var(--transition-normal);
   border-radius: var(--border-radius-pill);
-  background: var(--white-08);
-  border: 2px solid transparent;
+  background: var(--white);
+  border: 2px solid var(--black-10);
+  box-shadow: var(--shadow-sm);
 }
 
 .category-item:hover,
 .category-item.active {
   transform: translateY(-3px);
-  background: var(--white-15);
+  background: var(--blue-light);
   box-shadow: var(--shadow-md);
-  border-color: var(--white-20);
+  border-color: var(--blue-accent);
 }
 
 .category-item h3 {
   margin: 0;
   font-size: 1.2rem;
-  color: var(--white);
+  color: var(--text-dark);
   font-weight: 500;
 }
 
@@ -380,23 +390,24 @@ section h2 {
 }
 
 .project-item {
-  background: var(--white-08);
+  background: var(--white);
   border-radius: var(--border-radius);
   padding: 2rem;
   transition: all var(--transition-normal);
-  border: 1px solid var(--white-10);
+  border: 1px solid var(--black-10);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
   min-height: 200px;
+  box-shadow: var(--shadow-sm);
 }
 
 .project-item:hover {
   transform: translateY(-8px);
-  background: var(--white-15);
+  background: var(--white);
   box-shadow: var(--shadow-lg);
-  border-color: var(--white-20);
+  border-color: var(--blue-accent);
 }
 
 .project-item h3 {
@@ -408,7 +419,7 @@ section h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--white);
+  color: var(--text-dark);
 }
 
 .project-description {
@@ -468,15 +479,16 @@ section h2 {
 }
 
 .contact-info {
-  background: var(--white-08);
+  background: var(--white);
   padding: 2.5rem;
   border-radius: var(--border-radius);
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
-  border: 1px solid var(--white-10);
+  border: 1px solid var(--black-10);
   max-width: 800px;
   margin: 0 auto;
   width: 100%;
+  box-shadow: var(--shadow-sm);
 }
 
 .contact-info h3 {
@@ -484,7 +496,7 @@ section h2 {
   font-size: 1.8rem;
   text-align: center;
   font-weight: 500;
-  color: var(--white);
+  color: var(--text-dark);
 }
 
 .info-group {
@@ -492,7 +504,7 @@ section h2 {
   align-items: center;
   margin-bottom: 2rem;
   padding: 1.5rem;
-  background: var(--white-08);
+  background: var(--gray-light);
   border-radius: 15px;
   transition: all var(--transition-fast);
   border: 1px solid transparent;
@@ -504,15 +516,15 @@ section h2 {
 
 .info-group:hover {
   transform: translateX(10px);
-  background: var(--white-15);
+  background: var(--blue-light);
   box-shadow: var(--shadow-md);
-  border-color: var(--white-10);
+  border-color: var(--blue-accent);
 }
 
 .info-group i {
   font-size: 1.5rem;
   margin-right: 1.5rem;
-  color: var(--white-90);
+  color: var(--blue-accent);
   width: 30px;
   text-align: center;
 }
@@ -524,20 +536,20 @@ section h2 {
 .info-content h4 {
   margin: 0 0 0.5rem 0;
   font-size: 1.1rem;
-  color: var(--white);
+  color: var(--text-dark);
   font-weight: 500;
 }
 
 .info-content p,
 .info-content a {
   margin: 0;
-  color: var(--white-85);
+  color: var(--text-medium);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
 .info-content a:hover {
-  color: var(--white);
+  color: var(--blue-accent);
   text-decoration: underline;
 }
 
@@ -545,22 +557,24 @@ section h2 {
    Modal Styles
    =================================== */
 .modal-content {
-  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
-  color: var(--white);
+  background: var(--white);
+  color: var(--text-dark);
   border: none;
   border-radius: var(--border-radius);
   overflow: hidden;
+  box-shadow: var(--shadow-lg);
 }
 
 .modal-header {
-  border-bottom: 1px solid var(--white-10);
+  border-bottom: 1px solid var(--black-10);
   padding: 1.5rem;
+  background: var(--gray-light);
 }
 
 .modal-title {
   font-size: 1.6rem;
   font-weight: 500;
-  color: var(--white);
+  color: var(--text-dark);
 }
 
 .modal-body {
@@ -578,12 +592,12 @@ section h2 {
 .modal-body p {
   font-size: 1.05rem;
   line-height: 1.7;
-  color: var(--white-90);
+  color: var(--text-medium);
 }
 
 .btn-close {
-  filter: invert(1);
-  opacity: 0.8;
+  filter: none;
+  opacity: 0.6;
   transition: opacity var(--transition-fast);
 }
 
@@ -600,12 +614,13 @@ section h2 {
    Footer
    =================================== */
 footer {
-  background: var(--black-20);
-  color: var(--white-85);
+  background: var(--white);
+  color: var(--text-medium);
   padding: 2rem 0;
   text-align: center;
   margin-top: 4rem;
-  border-top: 1px solid var(--white-10);
+  border-top: 1px solid var(--black-10);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
 }
 
 footer p {
